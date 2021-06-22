@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
 
     h1 {
         font-family: Staatliches;
-        font-size: 120px;
+        font-size: 100px;
     }
 
     #category {

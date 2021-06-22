@@ -1,11 +1,14 @@
 import React from 'react'
 import GlobalStyles from './GlobalStyles'
+import Nav from './components/Nav'
+import Home from './pages/Home'
 
 const App = () => {
     return (
         <div>
             <GlobalStyles/>
-            app
+            <Nav />
+            <Home />
         </div>
     )
 }

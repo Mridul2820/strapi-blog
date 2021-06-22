@@ -7,8 +7,8 @@ import client from './utils/apolloClient'
 
 ReactDOM.render(
     <Router>
-        <ApolloProvider>
-            <App client={client}/>
+        <ApolloProvider client={client}>
+            <App/>
         </ApolloProvider>
     </Router>,
     document.getElementById('root')
