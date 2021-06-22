@@ -18,18 +18,6 @@ const GlobalStyle = createGlobalStyle`
         font-size: 100px;
     }
 
-    #category {
-        font-family: Staatliches;
-        font-weight: 500;
-    }
-
-    #title {
-        letter-spacing: 0.4px;
-        font-size: 22px;
-        font-size: 1.375rem;
-        line-height: 1.13636;
-    }
-
     #banner {
         margin: 20px;
         height: 800px;

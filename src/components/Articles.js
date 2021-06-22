@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import Card from "./Card";
 
 const Articles = ({ articles }) => {
@@ -7,23 +8,49 @@ const Articles = ({ articles }) => {
     const rightArticles = articles.slice(leftArticlesCount, articles.length);
 
     return (
-        <div>
-        <div className="uk-child-width-1-2" data-uk-grid>
-            <div>
-            {leftArticles.map((article, i) => {
-                return <Card article={article} key={`article__${article.slug}`} />;
-            })}
-            </div>
-            <div>
-            <div className="uk-child-width-1-2@m uk-grid-match" data-uk-grid>
-                {rightArticles.map((article, i) => {
-                return <Card article={article} key={`article__${article.slug}`} />;
-                })}
-            </div>
-            </div>
-        </div>
-        </div>
+        <Container>
+            <LeftGrid>
+            {leftArticles.map((article, i) => (
+                <Card 
+                    article={article} 
+                    key={`article__${article.slug}`} 
+                />
+            ))}
+            </LeftGrid>
+
+            <Rightgrid>
+            {rightArticles.map((article, i) => (
+                <Card 
+                    article={article} 
+                    key={`article__${article.slug}`} 
+                />
+            ))}
+            </Rightgrid>
+        </Container>
     );
 };
+
+const Container = styled.div`
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 25px;
+`
+
+const LeftGrid = styled.div`
+    
+`
+
+const Rightgrid = styled.div`
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat( auto-fit, 300px );
+
+    column-gap: 20px;
+
+    a {
+        width: 100%;
+    }
+`
 
 export default Articles;
