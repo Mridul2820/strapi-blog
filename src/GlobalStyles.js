@@ -15,12 +15,7 @@ const GlobalStyle = createGlobalStyle`
 
     h1 {
         font-family: Staatliches;
-        font-size: 100px;
-    }
-
-    #banner {
-        margin: 20px;
-        height: 800px;
+        font-size: 80px;
     }
 
     #editor {
