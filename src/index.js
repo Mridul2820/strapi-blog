@@ -2,13 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { BrowserRouter as Router } from "react-router-dom";
+import { ApolloProvider } from "@apollo/react-hooks";
+import client from './utils/apolloClient'
 
 ReactDOM.render(
-    <React.StrictMode>
-        <Router>
-            <App />
-        </Router>
-    </React.StrictMode>,
+    <Router>
+        <ApolloProvider>
+            <App client={client}/>
+        </ApolloProvider>
+    </Router>,
     document.getElementById('root')
 );
 
