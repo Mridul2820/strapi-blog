@@ -30,7 +30,7 @@ const Article = () => {
                     </BlogBanner>
 
                     <BlogBody>
-                        <ReactMarkdown source={articles[0].content} />
+                        <ReactMarkdown children={articles[0].content} />
                         <p>
                             <Moment format="MMM Do YYYY">{articles[0].published_at}</Moment>
                         </p>
